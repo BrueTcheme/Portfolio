@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Briefcase, GraduationCap, Code2, Globe } from 'lucide-react';
+import { Github, Linkedin, Briefcase, GraduationCap, Code2, Globe, ExternalLink } from 'lucide-react';
+import profilePhoto from '@/assets/profile-photo.jpg';
 import { photographerInfo } from '@/data/photographer';
 import { Separator } from '@/components/ui/separator';
 import { SEOHead } from '@/components/seo/SEOHead';
@@ -46,9 +47,9 @@ export default function About() {
               >
                 <div className="aspect-[3/4] relative overflow-hidden rounded-sm bg-muted">
                   <img
-                    src={photographerInfo.portraitImage}
+                    src={profilePhoto}
                     alt={photographerInfo.name}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover object-top"
                   />
                 </div>
                 

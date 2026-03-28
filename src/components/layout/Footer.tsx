@@ -1,8 +1,9 @@
 import { Github, Linkedin } from 'lucide-react';
 import { photographerInfo } from '@/data/photographer';
+import profilePhoto from '@/assets/profile-photo.jpg';
 
 /**
- * Minimal footer component with social links and copyright
+ * Minimal footer component with profile photo, social links and copyright
  */
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,10 +12,19 @@ export function Footer() {
     <footer className="border-t border-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-sm text-muted-foreground font-light tracking-wide">
-            © {currentYear} {photographerInfo.name}. All rights reserved.
-          </p>
+          {/* Profile photo + copyright */}
+          <div className="flex items-center gap-4">
+            <img
+              src={profilePhoto}
+              alt={photographerInfo.name}
+              className="w-10 h-10 rounded-full object-cover object-top border border-border"
+            />
+            <p className="text-sm text-muted-foreground font-light tracking-wide">
+              © {currentYear} {photographerInfo.name}. All rights reserved.
+            </p>
+          </div>
 
+          {/* Social Links */}
           <div className="flex items-center gap-6">
             {photographerInfo.socialLinks.github && (
               <a

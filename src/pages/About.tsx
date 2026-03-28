@@ -260,6 +260,41 @@ export default function About() {
             </motion.div>
           </div>
         </section>
+
+        {/* Side Project */}
+        <section className="py-16 md:py-24 px-6 lg:px-8 border-t border-border">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="flex items-start gap-6 p-6 border border-border rounded-sm hover:bg-accent/50 transition-colors"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="shrink-0 w-12 h-12 rounded-full bg-accent flex items-center justify-center">
+                <Code2 className="size-6 text-muted-foreground" />
+              </div>
+              <div className="space-y-2 flex-1">
+                <div className="flex items-center gap-2">
+                  <h3 className="text-lg font-medium">AgriSense</h3>
+                  <span className="px-2 py-0.5 text-xs font-light bg-accent rounded-full text-muted-foreground">In Progress</span>
+                </div>
+                <p className="text-sm font-light text-muted-foreground">
+                  A side project currently in development — not yet deployed.
+                </p>
+                <a
+                  href="https://github.com/Shashi116/AgriSense"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-light text-foreground hover:text-muted-foreground transition-colors"
+                >
+                  <Github className="size-4" />
+                  <span>View on GitHub</span>
+                  <ExternalLink className="size-3" />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
       </div>
     </>
   );

@@ -1,9 +1,8 @@
 /**
- * Core TypeScript interfaces for Frame Portfolio
- * Based on SPECIFICATION.md data model requirements
+ * Core TypeScript interfaces for Developer Portfolio
  */
 
-export type ProjectCategory = 'portraits' | 'landscapes' | 'editorial' | 'architecture' | 'documentary';
+export type ProjectCategory = 'fullstack' | 'frontend' | 'backend' | 'realtime' | 'devops';
 
 export type AspectRatio = 'portrait' | 'landscape' | 'square';
 
@@ -24,28 +23,42 @@ export interface Project {
   images: ProjectImage[];
   description: string;
   client?: string;
-  camera?: string;
+  techStack?: string;
   location?: string;
   slug: string;
+  liveUrl?: string;
+  githubUrl?: string;
 }
 
-export interface PhotographerInfo {
+export interface DeveloperInfo {
   name: string;
   tagline: string;
   heroIntroduction: string;
   biography: string;
   approach: string;
-  awards: string[];
-  clients: string[];
-  education: string;
+  skills: {
+    languages: string[];
+    databases: string[];
+    tools: string[];
+    methodologies: string[];
+  };
+  experience: {
+    company: string;
+    role: string;
+    location: string;
+    period: string;
+    highlights: string[];
+  }[];
+  education: string[];
+  languages: { name: string; level: string }[];
   location: string;
   email: string;
   phone: string;
   availability: string;
   socialLinks: {
-    instagram?: string;
+    github?: string;
     linkedin?: string;
-    behance?: string;
+    twitter?: string;
   };
   portraitImage: string;
 }
@@ -53,7 +66,7 @@ export interface PhotographerInfo {
 export interface ContactSubmission {
   name: string;
   email: string;
-  projectType: 'editorial' | 'commercial' | 'personal';
+  projectType: 'freelance' | 'fulltime' | 'collaboration';
   message: string;
   timestamp: Date;
 }

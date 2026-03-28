@@ -65,7 +65,7 @@ My technical toolkit spans the full stack — from responsive React frontends wi
   phone: '+91 9404490975',
   availability: 'Open to new opportunities',
   socialLinks: {
-    linkedin: 'https://linkedin.com/in/shashikant-kanole',
+    linkedin: 'https://www.linkedin.com/in/shashikant-kanole/',
     github: 'https://github.com/shashikantkanole',
   },
   // Photo by ThisisEngineering on Unsplash
